@@ -1,5 +1,7 @@
-import { Box, Button, Container, TextField, Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import "./App.css";
+import Form from "./component/Form";
+import HabitData from "./component/HabitData";
 
 function App() {
   return (
@@ -8,26 +10,12 @@ function App() {
         Daily Todo Routine :
       </Typography>
 
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 2,
-          marginTop: "10px",
-        }}
-      >
-        {/* input filed */}
+      {/* form */}
+      <Form />
 
-        <TextField
-          id="outlined-basic"
-          label="Task Name"
-          variant="outlined"
-          size="small"
-        />
+      {/* habit data */}
 
-        {/* button */}
-        <Button variant="contained">Submit</Button>
-      </Box>
+      <HabitData />
     </Container>
   );
 }
