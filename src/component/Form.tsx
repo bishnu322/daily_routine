@@ -19,6 +19,8 @@ const Form = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!taskName) return;
+
     addHabit(taskName, habitStatus);
   };
 
